@@ -28,4 +28,4 @@ Enter postcodes to geo-code in the cells below column A.
 
 run the python script.
 
-information will be output to %userprofile%\geo-coding\output\{timestamp}--postcodes-and-coordinates.csv
+information will be output to %userprofile%\geo-coding\output\\{timestamp}--postcodes-and-coordinates.csv
