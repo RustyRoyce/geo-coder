@@ -13,8 +13,8 @@ home = Path.home()
 timestamp = time.strftime("%Y%m%d-%H%M")
 filename = f"{timestamp}--postcodes-and-coordinates.csv"
 
-input_absolute = Path(home, "geo-coding", "input", "postcodes.csv")
-output_absolute = home / "geo-coding" / "output" / filename
+input_absolute = Path(home, "geo-coder", "input", "postcodes.csv")
+output_absolute = home / "geo-coder" / "output" / filename
 
 # open CSV file, and add each postcode to the aforementioned list.
 with open(input_absolute) as csv_file:
