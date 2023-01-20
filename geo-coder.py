@@ -1,5 +1,10 @@
 import requests,csv,time
 from pathlib import Path
+import requests
+from urllib3.exceptions import InsecureRequestWarning
+from urllib3 import disable_warnings
+
+disable_warnings(InsecureRequestWarning)
 
 base_url = "https://api.postcodes.io/postcodes/?filter="
 filters = "postcode,longitude,latitude"
@@ -23,7 +28,7 @@ with open(input_absolute) as csv_file:
         postcodes_list.append(row["postcode"])
 
 # API call providing aforementioned dict as payload, list of sites stored in r_list
-r = requests.post(base_url + filters,json=postcodes_dict).json()
+r = requests.post(base_url + filters,json=postcodes_dict, verify=False).json()
 r_list = (r["result"])
 
 address_info = []
