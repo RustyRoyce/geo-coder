@@ -1,19 +1,31 @@
-# geo-coder
- import postcodes in CSV, exports postcodes + coords in .csv
- 
+# GEO-CODER
+
+Transform postcodes to postcodes with longitude & latitude co-ordinates in .CSV format
+
+## Description
+
+Transform postcodes to postcodes with longitude & latitude co-ordinates in .CSV format.
+This script uses the postcodes.io API - https://api.postcodes.io which requires no authorisation/access token.
+
+The postcodes API is only applicable for locations based in the United Kingdom.
+
+## Getting Started
+
+### Dependencies
+
 tested with:
 requests==2.27.1
 Python 3.10.1
 
-Setup for Windows:
+### Installing for Windows
+
 Run the geo-coding.bat file, this will create the following directories
 %userprofile%\geo-coding\input
 %userprofile%\geo-coding\output
 and the following file:
 %userprofile%\geo-coding\input\postcodes.csv
 
-Install the requests library for Python if not already installed.
-pip install requests
+### Installing for Linux
 
 Setup for Linux:
 The geo-coding.py file uses the pathlib library and therefore is able to use both Linux and Windows file structures, however, there is no script to create the directories.
@@ -22,10 +34,38 @@ i.e
 $home/geo-coder/input
 $home/geo-coder/output
 
-How to run:
-open the postcodes.csv file and in cell A1, enter a heading of "postcode".
-Enter postcodes to geo-code in the cells below column A.
+### Executing program
 
-run the python script.
+* Open postcodes.csv file created in earlier Installation step.
+* Add field "postcode" in first column - the script looks for this exact string.
+* Add postcodes to be geo-coded in cells below postcode heading.
+* Open your terminal (CMD, Powershell, etc)
+* Run Python and specify the script (No arguments required)
+* Output file will be printed to terminal.
 
-information will be output to %userprofile%\geo-coding\output\\{timestamp}--postcodes-and-coordinates.csv
+```
+python3 geo-coder.py
+```
+
+## Authors
+
+Contributors names and contact info
+
+ex. Louis Royce 
+
+## Version History
+
+* 0.1
+    * Initial Release
+
+## License
+
+This project is licensed under the [Apache 2.0] License - see the LICENSE.md file for details
+
+## Future Improvements
+
+* Create Directories and File Structure automatically without requirement to run .BAT script
+
+* Ability to Pass single postcode as argument if there isn't a requirement for bulk geo-coding. 
+
+
