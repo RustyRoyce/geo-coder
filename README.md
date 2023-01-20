@@ -14,10 +14,10 @@ The postcodes API is only applicable for locations based in the United Kingdom.
 ### Dependencies
 
 tested with:
-requests==2.27.1
-Python 3.10.1
+* requests==2.27.1
+* Python 3.10.1
 
-Check if requests module is installed:
+Check if requests module is installed by running commands in terminal:
 
 ```
 pip freeze
