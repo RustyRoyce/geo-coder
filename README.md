@@ -17,6 +17,20 @@ tested with:
 requests==2.27.1
 Python 3.10.1
 
+Check if requests module is installed:
+
+```
+pip freeze
+```
+
+if not present, install using PIP:
+
+```
+pip install requests
+```
+
+
+
 ### Installing for Windows
 
 Run the geo-coding.bat file, this will create the following directories
